@@ -1,0 +1,84 @@
+Skip to content
+ Enterprise
+Search or jump to…
+Pull requests
+Issues
+Explore
+ 
+@I076186 
+EA-MDE
+/
+ADB-CICD
+Public
+Code
+Issues
+Pull requests
+Projects
+Security
+Insights
+ADB-CICD/Jobs/base.json
+@I539938
+I539938 initial demo commit
+Latest commit bcfe9f6 on Jan 20, 2021
+ History
+ 1 contributor
+35 lines (35 sloc)  1.01 KB
+
+{
+    "new_settings": {
+        "new_cluster": {
+            "spark_version": "7.3.x-scala2.12",
+            "spark_conf": {
+                "spark.databricks.delta.preview.enabled": "true"
+            },
+            "node_type_id": "Standard_DS3_v2",
+            "spark_env_vars": {
+                "PYSPARK_PYTHON": "/databricks/python3/bin/python3"
+            },
+            "enable_elastic_disk": true,
+            "azure_attributes": {
+                "availability": "ON_DEMAND_AZURE"
+            },
+            "num_workers": 8
+        },
+        "email_notifications": {},
+        "timeout_seconds": 0,
+        "schedule": {
+        "quartz_cron_expression": "0 0 0 ? * 1",
+        "timezone_id": "US/Pacific",
+        "pause_status": "UNPAUSED"
+        },
+        "max_concurrent_runs": 1,
+        "libraries": [
+            {
+              "egg": "dbfs:/ADB-POC/libs/mymath_latest.egg"
+            },
+            {
+              "whl": "dbfs:/ADB-POC/libs/myplus-latest-py3-none-any.whl"
+            }
+          ]
+    }
+}
+FooterSAP SE
+GitHub@SAP Docs
+SNOW Support Ticket
+Maintenance & Upgrade Roadmap
+FAQ (github.wdf)
+GitHub WDF → Tools Migrator
+SAP SE
+SAP SE
+GitHub@SAP Docs
+SNOW Support Ticket
+Maintenance & Upgrade Roadmap
+FAQ (github.wdf)
+GitHub WDF → Tools Migrator
+© 2023 GitHub, Inc.
+Footer navigation
+Help
+Support
+API
+Training
+Blog
+About
+GitHub Enterprise Server 3.7.10
+You have no unread notifications
